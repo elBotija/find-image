@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+.parent-cards{
+  column-count: 3;
+  column-gap: 0;
+  padding: 10px;
+  .card-container{
+    display: inline-block; /* important to wrap notes not content */
+    width: 100%;
+    .card{
+      margin: 10px;
+    }
+  }
+}
