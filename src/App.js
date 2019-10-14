@@ -40,13 +40,23 @@ function App() {
       setPage(goToPage)
     }
   }
+  const _showPageButtons = () => {
+
+    if(getData.length){
+      return(
+        <React.Fragment>
+          <button className="btn waves-effect waves-light" onClick={prevPage}>Anterior</button>
+          <button className="btn waves-effect waves-light" onClick={nextPage}>Siguiente</button>
+        </React.Fragment>
+      )
+    }
+  }
 
   return (
     <div className="App">
       <Form setSearch={setSearch}/>
       <Images data={getData}/>
-      <button className="btn waves-effect waves-light" onClick={prevPage}>Anterior</button>
-      <button className="btn waves-effect waves-light" onClick={nextPage}>Siguiente</button>
+      { _showPageButtons()}
     </div>
   );
 }
